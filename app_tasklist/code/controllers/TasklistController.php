@@ -4,15 +4,15 @@
  * @package some config
  * http://doc.silverstripe.org/framework/en/3.1/topics/controller
  */
-class PasswordAdminController extends Controller {
+class TasklistController extends Controller {
 
-    public static $url_topic = 'profile';
+    public static $url_topic = 'tasklist';
 
-    public static $url_segment = 'passwordadmin';
+    public static $url_segment = 'tasklist';
 
     private static $allowed_actions = array(
         'index',
-        'PasswordEditForm'
+        'TaskAddForm'
     );
 
     public static $template = 'Page';
@@ -22,7 +22,7 @@ class PasswordAdminController extends Controller {
      *
      * @var string
      */
-    public static $template_main = 'Administration';
+    public static $template_main = 'Tasklist';
 
     /**
      * Returns a link to this controller.  Overload with your own Link rules if they exist.
@@ -37,7 +37,7 @@ class PasswordAdminController extends Controller {
     public function init() {
         parent::init();
 
-        if(!Member::currentUser()) return $this->redirect('Security/login?BackURL=passwordadmin/index');
+        if(!Member::currentUser()) return $this->redirect('Security/login?BackURL=tasklist/index');
     }
 
     /**
@@ -48,14 +48,14 @@ class PasswordAdminController extends Controller {
     public function index() {
 
         return $this->customise(new ArrayData(array(
-            "Title" => 'Passwort ändern',
-            "Form" => $this->PasswordEditForm()
+            "Title" => 'Todos',
+            "Form" => $this->TaskAddForm()
         )))->renderWith(
-            array('PasswordAdmin_index', 'PasswordAdmin', $this->stat('template_main'), $this->stat('template'))
+            array('Tasklist_index', 'Tasklist', $this->stat('template_main'), $this->stat('template'))
         );
     }
 
-    public function PasswordEditForm(){
-        return PasswordEditForm::create($this, "PasswordEditForm");
+    public function TaskAddForm(){
+        return TaskAddForm::create($this, "TaskAddForm");
     }
 }
