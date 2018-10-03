@@ -1,0 +1,7 @@
+---
+Name: customroutes
+After: framework/routes#coreroutes
+---
+Director:
+  rules:
+    'tasklist//$Action/$ID/$OtherID' : 'TasklistController'

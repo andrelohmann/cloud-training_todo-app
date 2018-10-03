@@ -1,0 +1,18 @@
+.modal-footer {
+    text-align: left;
+}
+.bottom-button-bar {
+    margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .navbar-header > p.navbar-text.navbar-left {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+dl.dl-horizontal.text-left dt {
+    text-align: left;
+}
+h1 {
+    font-size: 20px;
+}

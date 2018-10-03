@@ -1,0 +1,13 @@
+Member:
+  0:
+    Email: admin@todo.lokal
+    Password: p
+    FirstName: Default
+    Surname: Admin
+    Groups: =>Group.0
+  1:
+    Email: user@todo.lokal
+    Password: p
+    FirstName: First
+    Surname: User
+    Groups: =>Group.1

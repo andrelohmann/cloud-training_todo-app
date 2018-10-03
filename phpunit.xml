@@ -1,0 +1,58 @@
+<!--
+	PHPUnit configuration for SilverStripe
+
+	Requires PHPUnit 3.5+
+
+	Usage:
+	 - "phpunit": Runs all tests in all folders
+	 - "phpunit framework/tests/": Run all tests of the framework module
+	 - "phpunit framework/tests/filesystem": Run all filesystem tests within the framework module
+	 - "phpunit framework/tests/filesystem/FolderTest.php": Run a single test
+	 - "phpunit <dash><dash>coverage-html assets/": Generate coverage report (replace <dash> with "-", requires xdebug)
+
+	More information:
+	- http://www.phpunit.de/manual/current/en/textui.html
+	- http://doc.silverstripe.org/framework/en/topics/testing/#configuration
+
+    It is safe to remove this file for normal website operation.
+-->
+<phpunit bootstrap="framework/tests/bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="all">
+            <directory>app/tests</directory>
+        </testsuite>
+
+        <testsuite name="app">
+            <directory>app/tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <listeners>
+        <listener class="SS_TestListener" file="framework/dev/TestListener.php" />
+    </listeners>
+
+    <groups>
+        <exclude>
+            <group>sanitychecks</group>
+        </exclude>
+    </groups>
+
+    <filter>
+        <blacklist>
+            <directory suffix=".php">bootstrap_extra_fields/</directory>
+            <directory suffix=".php">bootstrap_flash_message/</directory>
+            <directory suffix=".php">bootstrap_navbar_login/</directory>
+            <directory suffix=".php">bootstrap_orderable_frontend/</directory>
+            <directory suffix=".php">extended-date/</directory>
+            <directory suffix=".php">extended-file/</directory>
+            <directory suffix=".php">extended-image/</directory>
+            <directory suffix=".php">framework/</directory>
+            <directory suffix=".php">geoform/</directory>
+            <directory suffix=".php">geolocation/</directory>
+            <directory suffix=".php">legacyfields/</directory>
+            <directory suffix=".php">mobile_detector/</directory>
+            <directory suffix=".php">session_extender/</directory>
+            <directory suffix=".php">smtp_mailer/</directory>
+        </blacklist>
+    </filter>
+</phpunit>

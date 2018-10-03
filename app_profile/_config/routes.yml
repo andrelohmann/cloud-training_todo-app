@@ -1,0 +1,9 @@
+---
+Name: customroutes
+After: framework/routes#coreroutes
+---
+Director:
+  rules:
+    'passwordadmin//$Action/$ID/$OtherID' : 'PasswordAdminController'
+    'emailadmin//$Action/$ID/$OtherID' : 'EmailAdminController'
+    'signup//$Action/$ID/$OtherID' : 'SignupController'

@@ -1,0 +1,47 @@
+{
+  "name": "andrelohmann/cloud-training_todo-app",
+	"require": {
+		"php": ">=5.5.9",
+		"composer/installers": "*",
+    "silverstripe/framework": "3.7.1",
+    "mustangostang/spyc": "^0.6.2",
+    "andrelohmann-silverstripe/framework-errorpage-patch": "3.7.1",
+    "andrelohmann-silverstripe/extended-file": "1.*",
+    "andrelohmann-silverstripe/extended-image": "1.*",
+    "andrelohmann-silverstripe/extended-date": "1.*",
+    "andrelohmann-silverstripe-themes/bootstrap": "4.*",
+    "andrelohmann-silverstripe/smtpmailer": "3.*",
+    "andrelohmann-silverstripe/bootstrap_extra_fields": "2.*",
+    "andrelohmann-silverstripe/bootstrap_navbar_loginform": "2.*",
+    "andrelohmann-silverstripe/bootstrap_orderable_frontend": "1.*",
+    "andrelohmann-silverstripe/cache-backends": "1.*",
+    "andrelohmann-silverstripe/bootstrap_flash_message": "1.*",
+    "andrelohmann-silverstripe/rest-api-basicauth": "0.*"
+  },
+	"minimum-stability": "stable",
+  "scripts": {
+    "post-install-cmd": [
+        "cp -r vendor/andrelohmann-silverstripe/cache-backends/* framework/",
+        "cp -r vendor/andrelohmann-silverstripe/framework-errorpage-patch/* framework/",
+        "sed -i -e 's/$.support.focusinBubbles = !!($.browser.msie);/$.support.focusinBubbles = !!($.browser) \\&\\& !$.browser.msie;/g' framework/thirdparty/jquery-entwine/dist/jquery.concrete-dist.js",
+        "sed -i -e 's/$.support.focusinBubbles = !!($.browser.msie);/$.support.focusinBubbles = !!($.browser) \\&\\& !$.browser.msie;/g' framework/thirdparty/jquery-entwine/dist/jquery.entwine-dist.js"
+    ],
+    "post-update-cmd": [
+        "cp -r vendor/andrelohmann-silverstripe/cache-backends/* framework/",
+        "cp -r vendor/andrelohmann-silverstripe/framework-errorpage-patch/* framework/",
+        "sed -i -e 's/$.support.focusinBubbles = !!($.browser.msie);/$.support.focusinBubbles = !!($.browser) \\&\\& !$.browser.msie;/g' framework/thirdparty/jquery-entwine/dist/jquery.concrete-dist.js",
+        "sed -i -e 's/$.support.focusinBubbles = !!($.browser.msie);/$.support.focusinBubbles = !!($.browser) \\&\\& !$.browser.msie;/g' framework/thirdparty/jquery-entwine/dist/jquery.entwine-dist.js"
+    ]
+  },
+  "config": {
+      "github-oauth": {
+          "github.com": "b2d48b5243711ba700f84fa5154294bb6e9fadd5"
+      }
+  },
+  "require-dev": {
+      "behat/behat": "^3.4",
+      "phpunit/phpunit": "^4.8",
+      "behat/mink": "^1.7",
+      "behat/mink-goutte-driver": "^1.2"
+  }
+}

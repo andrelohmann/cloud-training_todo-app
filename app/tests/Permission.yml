@@ -1,0 +1,7 @@
+Permission:
+  1:
+    Code: ADMIN
+    Group: =>Group.0
+  1:
+    Code: ACCESS_CUSTOMER
+    Group: =>Group.1
