@@ -41,8 +41,6 @@ class TaskAddForm extends BootstrapHorizontalForm {
 
       $Task->write();
 
-      $Task->logIn();
-
       BootstrapFlashMessage::set("Task \"".$Task->Title."\" hinzugefügt", 'success');
 
       return $this->controller->redirect('tasklist/index');

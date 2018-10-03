@@ -55,7 +55,7 @@ define('SS_MANIFESTCACHE', 'ManifestCache_File_PHP'); // on zend opcache install
 define('ADMIN_EMAIL','__EMAIL__');
 
 // Default Destionation path after successfull login
-define('DEFAULT_LOGIN_DESTINATION', 'redirect/index');
+define('DEFAULT_LOGIN_DESTINATION', 'tasklist/index');
 
 // Modules
 
