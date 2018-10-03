@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class EmailEditForm extends BootstrapHorizontalForm {
+class SignupForm extends BootstrapHorizontalForm {
 
     public function __construct($controller, $name, $fields = null, $actions = null) {
 

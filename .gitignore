@@ -22,6 +22,8 @@
 /mobile_detector
 /session_extender
 /smtpmailer
+/rest-api-basicauth
+/silverstripe-rest-api
 /themes
 /vendor
 /RESOURCES
