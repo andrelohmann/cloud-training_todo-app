@@ -1,4 +1,4 @@
-# Todo - (c) Andre Lohmann (and others) 2018
+# Todo Application - (c) Andre Lohmann (and others) 2018
 
 ## Maintainer Contact
  * Andre Lohmann
