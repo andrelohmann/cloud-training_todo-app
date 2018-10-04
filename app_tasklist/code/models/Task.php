@@ -4,6 +4,7 @@ class Task extends DataObject {
 
     private static $db = [
         'Title' => 'Varchar(255)',
+        'InDoing' => 'Boolean',
         'Sort' => 'Int'
     ];
 
