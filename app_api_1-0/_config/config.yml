@@ -1,0 +1,9 @@
+---
+Name: app_api_1_0
+After:
+  - 'framework/*'
+  - 'silverstripe-rest-api/*'
+---
+Api1_0TasksController:
+  extensions:
+    - Ntb\RestAPI\PaginationExtension

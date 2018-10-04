@@ -1,9 +1,9 @@
 Task:
   0:
     Title: Do some stuff
-    Owner: =>Member.1
+    Member: =>Member.1
     Sort: 1
   1:
     Title: Do some other stuff
-    Owner: =>Member.1
+    Member: =>Member.1
     Sort: 2

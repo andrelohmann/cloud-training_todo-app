@@ -24,6 +24,7 @@
 
         <testsuite name="app">
             <directory>app/tests</directory>
+            <directory>app_api_1-0/tests</directory>
         </testsuite>
     </testsuites>
 

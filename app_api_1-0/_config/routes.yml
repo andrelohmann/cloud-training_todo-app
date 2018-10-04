@@ -1,0 +1,7 @@
+---
+Name: app_api_1-0
+After: framework/routes#coreroutes
+---
+Director:
+  rules:
+    'api/1.0/tasks/$ID': 'Api1_0TasksController'

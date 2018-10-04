@@ -3,10 +3,10 @@
 class BasicUnitTest extends SapphireTest {
 
     protected static $fixture_file = [
-        'app/tests/Group.yml',
-        'app/tests/Permission.yml',
-        'app/tests/Member.yml',
-        'app/tests/Task.yml'
+      'app_fixtures/Group.yml',
+      'app_fixtures/Permission.yml',
+      'app_fixtures/Member.yml',
+      'app_fixtures/Task.yml'
     ];
 
 
